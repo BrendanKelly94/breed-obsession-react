@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostComponent renders correctly 1`] = `
+<div>
+  <img
+    alt="thumbnail"
+    src={undefined}
+  />
+</div>
+`;
