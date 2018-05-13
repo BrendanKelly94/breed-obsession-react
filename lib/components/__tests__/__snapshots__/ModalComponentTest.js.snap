@@ -3,25 +3,20 @@
 exports[`PostComponent renders correctly 1`] = `
 <div>
   <div
-    className="col-lg-4 col-md-4 col-sm-4 col-xs-12"
+    className="modal-header"
   >
-    <img
-      alt="thumbnail"
-      src={undefined}
+    <h4
+      className="modal-title"
     />
   </div>
   <div
-    className="col-lg-8 col-md-8 col-sm-8 col-xs-12"
+    className="modal-body"
   >
     <div
-      className="row"
-    >
-      <p
-        className="name"
-      />
-    </div>
+      className="row container"
+    />
     <div
-      className="row details"
+      className="row container modal-details"
     >
       <p>
          
@@ -64,13 +59,37 @@ exports[`PostComponent renders correctly 1`] = `
          , 
          
       </p>
-      <button
-        className="btn btn-lg btn-outline-primary modal-button"
-        onClick={[Function]}
-      >
-        View
-      </button>
+      <p>
+         
+        <b>
+          Email:
+        </b>
+         
+         
+      </p>
+      <p>
+         
+        <b>
+          Phone:
+        </b>
+         
+         
+      </p>
     </div>
+    <div
+      className="row container"
+    />
+  </div>
+  <div
+    className="modal-footer"
+  >
+    <button
+      className="btn btn-outline-dark"
+      onClick={[Function]}
+      type="button"
+    >
+      Close
+    </button>
   </div>
 </div>
 `;

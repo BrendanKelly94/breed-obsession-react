@@ -1,10 +1,17 @@
 import React from 'react';
 import PostComponent from './PostComponent.jsx';
+import ModalComponent from './ModalComponent.jsx';
+import Modal from 'react-modal';
+
 
 class PostingsComponent extends React.Component {
 
   constructor(props) {
     super(props);
+  }
+
+  componentWillMount() {
+    Modal.setAppElement('body');
   }
 
   componentDidMount() {
@@ -23,7 +30,7 @@ class PostingsComponent extends React.Component {
   render() {
 
     const {
-      back, forward, offset, postings,
+      back, forward, selectPost, closeModal, isModalOpen,  offset, postings, selectedPost,
       animal, breed, State, city, sex,
       size, age } = this.props;
 
@@ -53,9 +60,17 @@ class PostingsComponent extends React.Component {
       <div>
 
         {postings.map((post) => {
-          return <PostComponent key = {post.id} post = {post}/>;
+          return <PostComponent key = {post.id} post = {post} selectPost = {selectPost}/>;
         })
         }
+
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          contentLabel="Postings Modal"
+        >
+          <ModalComponent selectedPost = {selectedPost} closeModal = {closeModal}/>
+        </Modal>
 
         {(offset - 25 != 0)?
           <button onClick = {() => back(backSearchObject)}> Back </button>

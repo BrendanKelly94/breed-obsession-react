@@ -1,7 +1,5 @@
 import React from 'react';
-const SelectComponent = (props) => {
-
-  const { items , callback} = props;
+const SelectComponent = ({ items , callback }) => {
 
   if(items){
     return (

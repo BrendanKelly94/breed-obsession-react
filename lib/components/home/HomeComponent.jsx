@@ -2,7 +2,7 @@ import React from 'react';
 import SelectComponent from './SelectComponent.jsx';
 import { Link } from 'react-router-dom';
 
-function HomeComponent({
+const HomeComponent = ({
   breeds,
   cities,
   setBreed,
@@ -12,7 +12,7 @@ function HomeComponent({
   setAge,
   fetchCities,
   fetchBreeds
-}) {
+}) => {
   const animals = ['barnyard', 'bird', 'cat', 'dog' , 'horse', 'reptile', 'smallfurry'];
 
   const states = [
@@ -41,6 +41,6 @@ function HomeComponent({
 
     </div>
   );
-}
+};
 
 export default HomeComponent;
