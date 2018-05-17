@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap';
+@import './home.scss';
+@import './postings.scss';
+@import './loading.scss';
+@import './carousel.scss';
+@import './modal.scss';
+
+body{
+  background-color: #5c42f4;
+  overflow-x: hidden;
+}

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostComponent renders correctly 1`] = `
-<div>
+<div
+  className="container row posts"
+>
   <div
     className="col-lg-4 col-md-4 col-sm-4 col-xs-12"
   >

@@ -1,4 +1,5 @@
 import React from 'react';
+import CarouselComponent from './CarouselComponent.jsx';
 
 const ModalComponent = ({ selectedPost, closeModal}) => {
 
@@ -8,8 +9,8 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
         <h4 className = "modal-title">{selectedPost.name}</h4>
       </div>
       <div className = "modal-body">
-        <div className = "row container">
-
+        <div>
+          <CarouselComponent pics = {selectedPost.pics} />
         </div>
         <div className = "row container modal-details">
           <p> <b>Status:</b> {selectedPost.status} </p>
@@ -21,8 +22,10 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
           <p> <b>Phone:</b> {selectedPost.phone} </p>
         </div>
 
-        <div className = "row container">
-          {selectedPost.description}
+        <div>
+          <p className = "description">
+            {selectedPost.description}
+          </p>
         </div>
       </div>
       <div className = "modal-footer">

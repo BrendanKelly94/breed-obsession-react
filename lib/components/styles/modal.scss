@@ -1,0 +1,90 @@
+
+#modal{
+  interval:false;
+}
+
+.modal-details{
+    p{
+      @include for-phone-only{
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+      @include for-tablet-portrait-up{
+        font-size: 12px;
+        margin-bottom: 3px;
+      }
+      @include for-tablet-landscape-up{
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+      @include for-desktop-up {
+        font-size: 16px;
+        margin-bottom: 7px;
+      }
+      @include for-big-desktop-up{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
+}
+.description{
+  @include for-phone-only{
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  @include for-tablet-portrait-up{
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  @include for-tablet-landscape-up{
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  @include for-desktop-up {
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+  @include for-big-desktop-up{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+
+.modal-button{
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+    @include for-phone-only{
+      font-size: $phone-font;
+    }
+    @include for-tablet-portrait-up{
+      font-size: $tablet-portrait-font;
+    }
+    @include for-tablet-landscape-up{
+      font-size: $tablet-landscape-font;
+    }
+    @include for-desktop-up {
+      font-size: $desktop-font;
+    }
+    @include for-big-desktop-up{
+      font-size: $big-desktop-font;
+    }
+}
+
+.modal-details{
+  display:flex;
+  justify-content:space-around;
+  p{
+    margin-right: 5px;
+  }
+}
+
+h1{
+  text-align:center;
+}
+
+ul{
+  list-style-type:none;
+}
