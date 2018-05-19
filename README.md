@@ -13,12 +13,8 @@ It will:
 
 TODO:
 
--Comlete Post component
+-Provide more test coverage
 
--Write more tests
+-Setup production environment
 
--Implement modal for postings components
-
--Serve initial data to /postings
-
--Implement service worker
+-Implement server side rendering
