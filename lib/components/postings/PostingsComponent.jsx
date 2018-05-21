@@ -37,7 +37,6 @@ class PostingsComponent extends React.Component {
     });
   }
 
-
   resizeCallback(){
     this.setState({
       viewportWidth: document.documentElement.clientWidth
@@ -49,7 +48,8 @@ class PostingsComponent extends React.Component {
     const {
       back, forward, selectPost, closeModal, isModalOpen,  offset, postings, selectedPost,
       animal, breed, State, city, sex,
-      size, age } = this.props;
+      size, age
+    } = this.props;
 
     const { viewportWidth } = this.state;
 

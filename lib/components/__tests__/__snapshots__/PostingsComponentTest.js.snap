@@ -1,16 +1,497 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostingsComponent renders correctly 1`] = `
-<div>
-  <button
-    onClick={[Function]}
-  >
-     Back 
-  </button>
-  <button
-    onClick={[Function]}
-  >
-     Next 
-  </button>
-</div>
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <div
+      className="container"
+      id="post-container"
+    >
+      <Link
+        replace={false}
+        to="/"
+      >
+        <button
+          className="btn"
+          id="back"
+        >
+           Home 
+        </button>
+      </Link>
+      <PostComponent
+        post={
+          Object {
+            "age": "Adult",
+            "breed": "Anatolian Shepherd, Akita",
+            "city": "Los Angeles",
+            "description": undefined,
+            "email": undefined,
+            "id": "40712419",
+            "name": "SONNY",
+            "phone": "(213) 485-0214",
+            "pics": Array [
+              Object {
+                "$t": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+                "@id": "1",
+                "@size": "x",
+              },
+            ],
+            "sex": "M",
+            "state": "CA",
+            "status": "A",
+            "street": "undefined1850 W. 60th St.",
+            "thumbnail": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+            "zip": "90047",
+          }
+        }
+        selectPost={[MockFunction]}
+      />
+      <Modal
+        ariaHideApp={true}
+        bodyOpenClassName="ReactModal__Body--open"
+        closeTimeoutMS={0}
+        contentLabel="Postings Modal"
+        isOpen={false}
+        onRequestClose={[MockFunction]}
+        parentSelector={[Function]}
+        portalClassName="ReactModalPortal"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+        shouldFocusAfterRender={true}
+        shouldReturnFocusAfterClose={true}
+        style={
+          Object {
+            "content": Object {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px solid rgb(204, 204, 204)",
+              "bottom": "40px",
+              "left": "5%",
+              "outline": "none",
+              "overflow": "auto",
+              "padding": "20px",
+              "position": "absolute",
+              "right": "5%",
+              "top": "40px",
+            },
+          }
+        }
+      >
+        <ModalComponent
+          closeModal={[MockFunction]}
+          selectedPost={Object {}}
+        />
+      </Modal>
+      <div
+        className="row"
+      >
+        <div
+          className="col-lg-6"
+          id="next-button"
+        >
+          <button
+            className="btn"
+            onClick={[Function]}
+          >
+             Next 
+          </button>
+        </div>
+      </div>
+      <footer>
+        <div
+          className="container"
+        >
+          <p>
+            Powered by Petfinder 
+            <a
+              href="https:www.petfinder.com"
+            >
+              www.petfinder.com
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>,
+  "nodes": Array [
+    <div>
+      <div
+        className="container"
+        id="post-container"
+      >
+        <Link
+          replace={false}
+          to="/"
+        >
+          <button
+            className="btn"
+            id="back"
+          >
+             Home 
+          </button>
+        </Link>
+        <PostComponent
+          post={
+            Object {
+              "age": "Adult",
+              "breed": "Anatolian Shepherd, Akita",
+              "city": "Los Angeles",
+              "description": undefined,
+              "email": undefined,
+              "id": "40712419",
+              "name": "SONNY",
+              "phone": "(213) 485-0214",
+              "pics": Array [
+                Object {
+                  "$t": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+                  "@id": "1",
+                  "@size": "x",
+                },
+              ],
+              "sex": "M",
+              "state": "CA",
+              "status": "A",
+              "street": "undefined1850 W. 60th St.",
+              "thumbnail": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+              "zip": "90047",
+            }
+          }
+          selectPost={[MockFunction]}
+        />
+        <Modal
+          ariaHideApp={true}
+          bodyOpenClassName="ReactModal__Body--open"
+          closeTimeoutMS={0}
+          contentLabel="Postings Modal"
+          isOpen={false}
+          onRequestClose={[MockFunction]}
+          parentSelector={[Function]}
+          portalClassName="ReactModalPortal"
+          shouldCloseOnEsc={true}
+          shouldCloseOnOverlayClick={true}
+          shouldFocusAfterRender={true}
+          shouldReturnFocusAfterClose={true}
+          style={
+            Object {
+              "content": Object {
+                "background": "rgb(255, 255, 255)",
+                "border": "1px solid rgb(204, 204, 204)",
+                "bottom": "40px",
+                "left": "5%",
+                "outline": "none",
+                "overflow": "auto",
+                "padding": "20px",
+                "position": "absolute",
+                "right": "5%",
+                "top": "40px",
+              },
+            }
+          }
+        >
+          <ModalComponent
+            closeModal={[MockFunction]}
+            selectedPost={Object {}}
+          />
+        </Modal>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-6"
+            id="next-button"
+          >
+            <button
+              className="btn"
+              onClick={[Function]}
+            >
+               Next 
+            </button>
+          </div>
+        </div>
+        <footer>
+          <div
+            className="container"
+          >
+            <p>
+              Powered by Petfinder 
+              <a
+                href="https:www.petfinder.com"
+              >
+                www.petfinder.com
+              </a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_context": Object {},
+    "_element": <PostingsComponent
+      State="California"
+      age=""
+      animal="dog"
+      back={[MockFunction]}
+      breed="pug"
+      city=""
+      closeModal={[MockFunction]}
+      forward={[MockFunction]}
+      isModalOpen={false}
+      offset={25}
+      postings={
+        Array [
+          Object {
+            "age": "Adult",
+            "breed": "Anatolian Shepherd, Akita",
+            "city": "Los Angeles",
+            "description": undefined,
+            "email": undefined,
+            "id": "40712419",
+            "name": "SONNY",
+            "phone": "(213) 485-0214",
+            "pics": Array [
+              Object {
+                "$t": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+                "@id": "1",
+                "@size": "x",
+              },
+            ],
+            "sex": "M",
+            "state": "CA",
+            "status": "A",
+            "street": "undefined1850 W. 60th St.",
+            "thumbnail": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+            "zip": "90047",
+          },
+        ]
+      }
+      selectPost={[MockFunction]}
+      selectedPost={Object {}}
+      sex=""
+      size=""
+    />,
+    "_forcedUpdate": false,
+    "_instance": PostingsComponent {
+      "context": Object {},
+      "props": Object {
+        "State": "California",
+        "age": "",
+        "animal": "dog",
+        "back": [MockFunction],
+        "breed": "pug",
+        "city": "",
+        "closeModal": [MockFunction],
+        "forward": [MockFunction],
+        "isModalOpen": false,
+        "offset": 25,
+        "postings": Array [
+          Object {
+            "age": "Adult",
+            "breed": "Anatolian Shepherd, Akita",
+            "city": "Los Angeles",
+            "description": undefined,
+            "email": undefined,
+            "id": "40712419",
+            "name": "SONNY",
+            "phone": "(213) 485-0214",
+            "pics": Array [
+              Object {
+                "$t": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+                "@id": "1",
+                "@size": "x",
+              },
+            ],
+            "sex": "M",
+            "state": "CA",
+            "status": "A",
+            "street": "undefined1850 W. 60th St.",
+            "thumbnail": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+            "zip": "90047",
+          },
+        ],
+        "selectPost": [MockFunction],
+        "selectedPost": Object {},
+        "sex": "",
+        "size": "",
+      },
+      "refs": Object {},
+      "resizeCallback": [Function],
+      "state": Object {
+        "viewportWidth": 0,
+      },
+      "updater": Updater {
+        "_callbacks": Array [],
+        "_renderer": [Circular],
+      },
+    },
+    "_newState": null,
+    "_rendered": <div>
+      <div
+        className="container"
+        id="post-container"
+      >
+        <Link
+          replace={false}
+          to="/"
+        >
+          <button
+            className="btn"
+            id="back"
+          >
+             Home 
+          </button>
+        </Link>
+        <PostComponent
+          post={
+            Object {
+              "age": "Adult",
+              "breed": "Anatolian Shepherd, Akita",
+              "city": "Los Angeles",
+              "description": undefined,
+              "email": undefined,
+              "id": "40712419",
+              "name": "SONNY",
+              "phone": "(213) 485-0214",
+              "pics": Array [
+                Object {
+                  "$t": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+                  "@id": "1",
+                  "@size": "x",
+                },
+              ],
+              "sex": "M",
+              "state": "CA",
+              "status": "A",
+              "street": "undefined1850 W. 60th St.",
+              "thumbnail": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+              "zip": "90047",
+            }
+          }
+          selectPost={[MockFunction]}
+        />
+        <Modal
+          ariaHideApp={true}
+          bodyOpenClassName="ReactModal__Body--open"
+          closeTimeoutMS={0}
+          contentLabel="Postings Modal"
+          isOpen={false}
+          onRequestClose={[MockFunction]}
+          parentSelector={[Function]}
+          portalClassName="ReactModalPortal"
+          shouldCloseOnEsc={true}
+          shouldCloseOnOverlayClick={true}
+          shouldFocusAfterRender={true}
+          shouldReturnFocusAfterClose={true}
+          style={
+            Object {
+              "content": Object {
+                "background": "rgb(255, 255, 255)",
+                "border": "1px solid rgb(204, 204, 204)",
+                "bottom": "40px",
+                "left": "5%",
+                "outline": "none",
+                "overflow": "auto",
+                "padding": "20px",
+                "position": "absolute",
+                "right": "5%",
+                "top": "40px",
+              },
+            }
+          }
+        >
+          <ModalComponent
+            closeModal={[MockFunction]}
+            selectedPost={Object {}}
+          />
+        </Modal>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-6"
+            id="next-button"
+          >
+            <button
+              className="btn"
+              onClick={[Function]}
+            >
+               Next 
+            </button>
+          </div>
+        </div>
+        <footer>
+          <div
+            className="container"
+          >
+            <p>
+              Powered by Petfinder 
+              <a
+                href="https:www.petfinder.com"
+              >
+                www.petfinder.com
+              </a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>,
+    "_rendering": false,
+    "_updater": Updater {
+      "_callbacks": Array [],
+      "_renderer": [Circular],
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <PostingsComponent
+    State="California"
+    age=""
+    animal="dog"
+    back={[MockFunction]}
+    breed="pug"
+    city=""
+    closeModal={[MockFunction]}
+    forward={[MockFunction]}
+    isModalOpen={false}
+    offset={25}
+    postings={
+      Array [
+        Object {
+          "age": "Adult",
+          "breed": "Anatolian Shepherd, Akita",
+          "city": "Los Angeles",
+          "description": undefined,
+          "email": undefined,
+          "id": "40712419",
+          "name": "SONNY",
+          "phone": "(213) 485-0214",
+          "pics": Array [
+            Object {
+              "$t": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+              "@id": "1",
+              "@size": "x",
+            },
+          ],
+          "sex": "M",
+          "state": "CA",
+          "status": "A",
+          "street": "undefined1850 W. 60th St.",
+          "thumbnail": "http://photos.petfinder.com/photos/pets/40712419/1/?bust=1517392734&width=500&-x.jpg",
+          "zip": "90047",
+        },
+      ]
+    }
+    selectPost={[MockFunction]}
+    selectedPost={Object {}}
+    sex=""
+    size=""
+  />,
+}
 `;

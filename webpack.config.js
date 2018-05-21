@@ -97,11 +97,7 @@ const config = {
     }),
     new CleanWebpackPlugin(['public']),
   ],
-  devServer: {
-    historyApiFallback: {
-      index: 'index.html'
-    }
-  }
+
 };
 
 module.exports = config;

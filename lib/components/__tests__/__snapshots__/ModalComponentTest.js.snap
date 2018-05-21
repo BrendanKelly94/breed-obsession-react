@@ -1,95 +1,322 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostComponent renders correctly 1`] = `
-<div>
-  <div
-    className="modal-header"
-  >
-    <h4
-      className="modal-title"
-    />
-  </div>
-  <div
-    className="modal-body"
-  >
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
     <div
-      className="row container"
-    />
-    <div
-      className="row container modal-details"
+      className="modal-header"
     >
-      <p>
-         
-        <b>
-          Status:
-        </b>
-         
-         
-      </p>
-      <p>
-         
-        <b>
-          Age:
-        </b>
-         
-         
-      </p>
-      <p>
-         
-        <b>
-          Sex:
-        </b>
-         
-         
-      </p>
-      <p>
-         
-        <b>
-          Breed:
-        </b>
-         
-         
-      </p>
-      <p>
-         
-        <b>
-          Location:
-        </b>
-         
-         , 
-         
-      </p>
-      <p>
-         
-        <b>
-          Email:
-        </b>
-         
-         
-      </p>
-      <p>
-         
-        <b>
-          Phone:
-        </b>
-         
-         
-      </p>
+      <h4
+        className="modal-title"
+      />
     </div>
     <div
-      className="row container"
-    />
-  </div>
-  <div
-    className="modal-footer"
-  >
-    <button
-      className="btn btn-outline-dark"
-      onClick={[Function]}
-      type="button"
+      className="modal-body"
     >
-      Close
-    </button>
-  </div>
-</div>
+      <div>
+        <CarouselComponent
+          pics={undefined}
+        />
+      </div>
+      <div
+        className="row container modal-details"
+      >
+        <p>
+           
+          <b>
+            Status:
+          </b>
+           
+           
+        </p>
+        <p>
+           
+          <b>
+            Age:
+          </b>
+           
+           
+        </p>
+        <p>
+           
+          <b>
+            Sex:
+          </b>
+           
+           
+        </p>
+        <p>
+           
+          <b>
+            Breed:
+          </b>
+           
+           
+        </p>
+        <p>
+           
+          <b>
+            Location:
+          </b>
+           
+           , 
+           
+        </p>
+        <p>
+           
+          <b>
+            Email:
+          </b>
+           
+           
+        </p>
+        <p>
+           
+          <b>
+            Phone:
+          </b>
+           
+           
+        </p>
+      </div>
+      <div>
+        <p
+          className="description"
+        />
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <button
+        className="btn btn-outline-dark"
+        onClick={[Function]}
+        type="button"
+      >
+        Close
+      </button>
+    </div>
+  </div>,
+  "nodes": Array [
+    <div>
+      <div
+        className="modal-header"
+      >
+        <h4
+          className="modal-title"
+        />
+      </div>
+      <div
+        className="modal-body"
+      >
+        <div>
+          <CarouselComponent
+            pics={undefined}
+          />
+        </div>
+        <div
+          className="row container modal-details"
+        >
+          <p>
+             
+            <b>
+              Status:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Age:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Sex:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Breed:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Location:
+            </b>
+             
+             , 
+             
+          </p>
+          <p>
+             
+            <b>
+              Email:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Phone:
+            </b>
+             
+             
+          </p>
+        </div>
+        <div>
+          <p
+            className="description"
+          />
+        </div>
+      </div>
+      <div
+        className="modal-footer"
+      >
+        <button
+          className="btn btn-outline-dark"
+          onClick={[Function]}
+          type="button"
+        >
+          Close
+        </button>
+      </div>
+    </div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_context": Object {},
+    "_element": <ModalComponent
+      closeModal={[MockFunction]}
+      selectedPost={Object {}}
+    />,
+    "_forcedUpdate": false,
+    "_instance": null,
+    "_newState": null,
+    "_rendered": <div>
+      <div
+        className="modal-header"
+      >
+        <h4
+          className="modal-title"
+        />
+      </div>
+      <div
+        className="modal-body"
+      >
+        <div>
+          <CarouselComponent
+            pics={undefined}
+          />
+        </div>
+        <div
+          className="row container modal-details"
+        >
+          <p>
+             
+            <b>
+              Status:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Age:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Sex:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Breed:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Location:
+            </b>
+             
+             , 
+             
+          </p>
+          <p>
+             
+            <b>
+              Email:
+            </b>
+             
+             
+          </p>
+          <p>
+             
+            <b>
+              Phone:
+            </b>
+             
+             
+          </p>
+        </div>
+        <div>
+          <p
+            className="description"
+          />
+        </div>
+      </div>
+      <div
+        className="modal-footer"
+      >
+        <button
+          className="btn btn-outline-dark"
+          onClick={[Function]}
+          type="button"
+        >
+          Close
+        </button>
+      </div>
+    </div>,
+    "_rendering": false,
+    "_updater": Updater {
+      "_callbacks": Array [],
+      "_renderer": [Circular],
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ModalComponent
+    closeModal={[MockFunction]}
+    selectedPost={Object {}}
+  />,
+}
 `;

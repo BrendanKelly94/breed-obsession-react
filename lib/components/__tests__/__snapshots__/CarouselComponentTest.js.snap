@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarouselComponent renders correctly 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <UncontrolledCarousel
+    autoPlay={false}
+    controls={true}
+    indicators={true}
+    items={Array []}
+  />,
+  "nodes": Array [
+    <UncontrolledCarousel
+      autoPlay={false}
+      controls={true}
+      indicators={true}
+      items={Array []}
+    />,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_context": Object {},
+    "_element": <CarouselComponent
+      pics={Array []}
+    />,
+    "_forcedUpdate": false,
+    "_instance": null,
+    "_newState": null,
+    "_rendered": <UncontrolledCarousel
+      autoPlay={false}
+      controls={true}
+      indicators={true}
+      items={Array []}
+    />,
+    "_rendering": false,
+    "_updater": Updater {
+      "_callbacks": Array [],
+      "_renderer": [Circular],
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <CarouselComponent
+    pics={Array []}
+  />,
+}
+`;
