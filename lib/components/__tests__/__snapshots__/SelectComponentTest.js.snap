@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SelectComponent renders correctly 1`] = `
-<select
-  onChange={[MockFunction]}
-/>
+<div
+  className="row"
+>
+  <div
+    className="col-sm-4 col-md-4 col-lg-4"
+  >
+    <label />
+  </div>
+  <div
+    className="col-sm-8 col-md-8 col-lg-8"
+  >
+    <select
+      onChange={[MockFunction]}
+    />
+  </div>
+</div>
 `;

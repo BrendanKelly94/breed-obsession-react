@@ -34,7 +34,7 @@ const PostComponent = ({ post , selectPost }) => {
           <p> <b>Sex:</b> {post.sex} </p>
           <p> <b>Breed:</b> {post.breed} </p>
           <p> <b>Location:</b> {post.city} , {post.State} </p>
-          <button className = "btn btn-lg btn-outline-primary modal-button" onClick = {() => selectPost(postObject)}>View</button>
+          <button className = "btn btn-lg btn-outline-dark modal-button" onClick = {() => selectPost(postObject)}>View</button>
         </div>
       </div>
     </div>

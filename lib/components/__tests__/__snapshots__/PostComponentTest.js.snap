@@ -67,7 +67,7 @@ exports[`PostComponent renders correctly 1`] = `
          
       </p>
       <button
-        className="btn btn-lg btn-outline-primary modal-button"
+        className="btn btn-lg btn-outline-dark modal-button"
         onClick={[Function]}
       >
         View

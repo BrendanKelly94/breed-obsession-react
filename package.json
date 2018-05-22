@@ -6,15 +6,20 @@
   "author": "Brendan Kelly",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
     "webpack": "webpack -wd",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "verify-tests": "jest --coverage",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib -d build --copy-files",
+    "start": "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js -i max --name appProd",
+    "heroku-postbuild": "yarn build-webpack && yarn build-node"
   },
   "private": false,
   "babel": {
     "presets": [
       "react",
-      "env",
+      ["env", {"targets": {"node": "current"} }],
       "stage-2"
     ]
   },
