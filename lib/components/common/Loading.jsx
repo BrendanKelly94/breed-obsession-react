@@ -7,7 +7,7 @@ class Loading extends React.Component {
     const { isCenter} = this.props;
     let slider;
     if(isCenter){
-      slider = <div style = {{'width': '120px', 'height': '120px', 'top': '50%', 'left': '50%'}} className = 'loader'></div>;
+      slider = <div style = {{'width': '120px', 'height': '120px', 'top': '50%', 'left': '50%', 'margin-left': 'auto', 'margin-right': 'auto'}} className = 'loader'></div>;
     }else{
       slider = <div style = {{'width': '20px', 'height': '20px', 'top': '-5px', 'left': '4%'}} className = 'loader'></div>;
     }
