@@ -12,7 +12,7 @@
     "verify-tests": "jest --coverage",
     "build-webpack": "webpack -p",
     "build-node": "babel lib -d build --copy-files",
-    "start": "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js",
+    "start": "NODE_ENV=production NODE_PATH=./build node build/server.js",
     "heroku-postbuild": "yarn build-node && yarn build-webpack"
   },
   "private": false,
