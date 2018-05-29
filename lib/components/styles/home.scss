@@ -94,6 +94,9 @@
 
 .home p{
   color: #fff;
+  @include for-phone-only{
+    margin-right: 20%;
+  }
   @include for-tablet-landscape-up{
     color: #000;
   }
@@ -156,7 +159,7 @@ a{
 #advanced-toggle{
   justify-content:center;
   button{
-    color: #67f441;
+    color: #61dafb;
     margin-top:10px;
     margin-bottom: 10px;
     background-color:transparent;
