@@ -17,10 +17,10 @@ const HomeComponent = ({
   requestingCities,
 }) => {
 
-  const animals = ['Barnyard', 'Bird', 'Cat', 'Dog' , 'Horse', 'Reptile', 'Smallfurry'];
+  const animals = ['Not Selected', 'Barnyard', 'Bird', 'Cat', 'Dog' , 'Horse', 'Reptile', 'Smallfurry'];
 
   const states = [
-    'Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado',
+    'Not Selected','Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado',
     'Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia',
     'Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine',
     'Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana',
@@ -38,9 +38,9 @@ const HomeComponent = ({
 
       <div className = "row" id = "home">
         <SelectComponent isRequesting = {false} label = "Animal" items = {animals} callback = {fetchBreeds} />
-        <SelectComponent isRequesting = {requestingBreeds} label = "Breed" items = {breeds} callback = {setBreed} />
+        <SelectComponent isRequesting = {requestingBreeds} label = "Breed" items = {['Not Selected', ...breeds]} callback = {setBreed} />
         <SelectComponent isRequesting = {false} label = "State" items = {states} callback = {fetchCities} />
-        <SelectComponent isRequesting = {requestingCities} label = "City" items = {cities} callback = {setCity} />
+        <SelectComponent isRequesting = {requestingCities} label = "City" items = {['Not Selected', ...cities]} callback = {setCity} />
 
         <div className = "row"  id = "advanced-toggle">
           <button data-toggle = "collapse" data-target = "#advanced" aria-expanded = "false" aria-controls = "advanced">
@@ -49,9 +49,9 @@ const HomeComponent = ({
         </div>
 
         <div className = "collapse" id = "advanced">
-          <SelectComponent isRequesting = {false} label = "Sex" items = {['M', 'F']} callback = {setSex} />
-          <SelectComponent isRequesting = {false} label = "Age" items = {['Baby', 'Young Adult', 'Senior']} callback = {setAge} />
-          <SelectComponent isRequesting = {false} label = "Size" items = {['S', 'M', 'L', 'XL']} callback = {setSize} />
+          <SelectComponent isRequesting = {false} label = "Sex" items = {['Not Selected','M', 'F']} callback = {setSex} />
+          <SelectComponent isRequesting = {false} label = "Age" items = {['Not Selected','Baby', 'Young Adult', 'Senior']} callback = {setAge} />
+          <SelectComponent isRequesting = {false} label = "Size" items = {['Not Selected','S', 'M', 'L', 'XL']} callback = {setSize} />
         </div>
 
       </div>
