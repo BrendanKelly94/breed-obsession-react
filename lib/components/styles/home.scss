@@ -115,14 +115,17 @@ select{
     width:200px;
   }
   @include for-tablet-landscape-up{
+    min-width:200px;
     color: #000;
     border-color: #000;
   }
   @include for-desktop-up {
+    min-width:200px;
     color: #000;
     border-color: #000;
   }
   @include for-big-desktop-up{
+    min-width:200px;
     color: #000;
     border-color: #000;
   }
