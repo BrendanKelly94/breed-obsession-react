@@ -39,7 +39,8 @@ class PostingsComponent extends React.Component {
 
   resizeCallback(){
     this.setState({
-      viewportWidth: document.documentElement.clientWidth
+      viewportWidth: document.documentElement.clientWidth,
+      viewportHeight: document.documentElement.clientHeight
     });
   }
 
@@ -65,7 +66,6 @@ class PostingsComponent extends React.Component {
         overflow: 'auto',
         outline: 'none',
         padding: '20px',
-        height: 'fit-content',
       }
     };
 
