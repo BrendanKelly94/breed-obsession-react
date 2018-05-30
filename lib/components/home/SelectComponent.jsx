@@ -8,8 +8,8 @@ const SelectComponent = ({ isRequesting, label, items , callback }) => {
         <label>{label}</label>
       </div>
       <div>
-        <input list = {label} onChange = {callback}/>
-        <datalist id = {label} className = {isRequesting?'loading':''}>
+        <input list = {label} className = {isRequesting?'loading':''} onChange = {callback}/>
+        <datalist id = {label}>
           {items.map((item) => {
             return <option key = {item} value = {item}/>;
           })}
