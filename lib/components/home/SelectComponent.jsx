@@ -1,23 +1,19 @@
 import React from 'react';
-import Loading from '../common/Loading.jsx';
 const SelectComponent = ({ isRequesting, label, items , callback }) => {
-
 
   return (
 
-    <div className = "row">
-      <div className = "col-sm-4 col-md-4 col-lg-4">
+    <div className = "select-item">
+      <div>
         <label>{label}</label>
       </div>
-      <div className = "col-sm-8 col-md-8 col-lg-8">
-        {(isRequesting)?
-          <Loading isCenter = {false}/>
-          :<select onChange = {callback}>
-            {items.map((item) => {
-              return <option key = {item} value = {item}> {item} </option>;
-            })}
-          </select>
-        }
+      <div>
+        <input list = {label} onChange = {callback}/>
+        <datalist id = {label} className = {isRequesting?'loading':''}>
+          {items.map((item) => {
+            return <option key = {item} value = {item}/>;
+          })}
+        </datalist>
       </div>
     </div>
 

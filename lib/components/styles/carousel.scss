@@ -17,42 +17,28 @@
 .carousel-item img{
 
   @include for-phone-only{
-    height:220px;
+    height:250px;
+    width:inherit !important;
   }
   @include for-tablet-portrait-up{
     height:300px;
+    width:300px !important;
   }
   @include for-tablet-landscape-up{
     height:400px;
+    width:400px !important;
   }
   @include for-desktop-up {
     height:500px;
+    width:500px !important;
   }
   @include for-big-desktop-up{
     height:600px;
+    width:600px !important;
   }
 }
 
 .carousel{
-  margin-left:auto;
-  margin-right:auto;
-}
-
-
-.carousel.slide{
-  @include for-phone-only{
-    width:100%;
-  }
-  @include for-tablet-portrait-up{
-    width:80%;
-  }
-  @include for-tablet-landscape-up{
-    width:50%;
-  }
-  @include for-desktop-up {
-    width:50%;
-  }
-  @include for-big-desktop-up{
-    width:50%;
-  }
+  float:left;
+  margin-right: 2%;
 }

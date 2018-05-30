@@ -7,11 +7,17 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
     <div>
       <div className = "modal-header">
         <h4 className = "modal-title">{selectedPost.name}</h4>
+        <button type = "button" className = "header-button btn btn-outline-dark" onClick = {() => closeModal()} >
+          <span>×</span>
+        </button>
       </div>
       <div className = "modal-body">
-        <div>
-          <CarouselComponent pics = {selectedPost.pics} />
-        </div>
+        <CarouselComponent pics = {selectedPost.pics} />
+
+        <p className = "description">
+          {selectedPost.description}
+        </p>
+
         <div className = "row container modal-details">
           <p> <b>Status:</b> {selectedPost.status} </p>
           <p> <b>Age:</b> {selectedPost.age} </p>
@@ -22,11 +28,6 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
           <p> <b>Phone:</b> {selectedPost.phone} </p>
         </div>
 
-        <div>
-          <p className = "description">
-            {selectedPost.description}
-          </p>
-        </div>
       </div>
       <div className = "modal-footer">
         <button type = "button" className = "btn btn-outline-dark" onClick = {() => closeModal()} >Close</button>

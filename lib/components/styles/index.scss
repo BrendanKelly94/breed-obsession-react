@@ -1,3 +1,35 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+//fonts
+$phone-font: 12px;
+$tablet-portrait-font: 14px;
+$tablet-landscape-font: 16px;
+$desktop-font: 18px;
+$big-desktop-font:24px;
+
+//img sizes
+$phone-img-size:200px;
+$tablet-portrait-img-size: 200px;
+$table-landscape-img-size: 200px;
+$desktop-img-size:250px;
+$big-desktop-img-size:400px;
+
+
 @import '~bootstrap/scss/bootstrap';
 @import './home.scss';
 @import './postings.scss';

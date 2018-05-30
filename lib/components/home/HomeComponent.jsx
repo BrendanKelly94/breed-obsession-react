@@ -17,10 +17,10 @@ const HomeComponent = ({
   requestingCities,
 }) => {
 
-  const animals = ['not selected', 'barnyard', 'bird', 'cat', 'dog' , 'horse', 'reptile', 'smallfurry'];
+  const animals = ['Barnyard', 'Bird', 'Cat', 'Dog' , 'Horse', 'Reptile', 'Smallfurry'];
 
   const states = [
-    'not selected','Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado',
+    'Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado',
     'Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia',
     'Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine',
     'Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana',
@@ -49,9 +49,9 @@ const HomeComponent = ({
         </div>
 
         <div className = "collapse" id = "advanced">
-          <SelectComponent isRequesting = {false} label = "Sex" items = {['not selected', 'M', 'F']} callback = {setSex} />
-          <SelectComponent isRequesting = {false} label = "Age" items = {['not selected', 'Baby', 'Young Adult', 'Senior']} callback = {setAge} />
-          <SelectComponent isRequesting = {false} label = "Size" items = {['not selected', 'S', 'M', 'L', 'XL']} callback = {setSize} />
+          <SelectComponent isRequesting = {false} label = "Sex" items = {['M', 'F']} callback = {setSex} />
+          <SelectComponent isRequesting = {false} label = "Age" items = {['Baby', 'Young Adult', 'Senior']} callback = {setAge} />
+          <SelectComponent isRequesting = {false} label = "Size" items = {['S', 'M', 'L', 'XL']} callback = {setSize} />
         </div>
 
       </div>

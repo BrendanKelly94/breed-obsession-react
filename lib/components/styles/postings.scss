@@ -1,36 +1,12 @@
-@mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
-}
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
-}
-
-//fonts
-$phone-font: 12px;
-$tablet-portrait-font: 12px;
-$tablet-landscape-font: 13px;
-$desktop-font: 16px;
-$big-desktop-font:20px;
-
-//img sizes
-$phone-img-size:200px;
-$tablet-portrait-img-size: 200px;
-$table-landscape-img-size: 200px;
-$desktop-img-size:250px;
-$big-desktop-img-size:400px;
 
 p.name{
-
+  margin-left: 7%;
+  margin-bottom: 0;
+  margin-top: 2%;
     @include for-phone-only{
+      text-align: center;
+      width: 100%;
+      margin-left:0;
       font-size: 18px !important;
       font-weight:600;
     }
@@ -144,7 +120,7 @@ img{
     width: 90%;
   }
   @include for-tablet-portrait-up{
-    width: 80%;
+    width: 75%;
   }
   @include for-tablet-landscape-up{
     width: 70%;
@@ -180,6 +156,19 @@ img{
     position: unset;
     margin-left:2%;
     margin-top:5px;
+    font-size: $phone-font;
+  }
+  @include for-tablet-portrait-up{
+    font-size: $tablet-portrait-font;
+  }
+  @include for-tablet-landscape-up{
+    font-size: $tablet-landscape-font;
+  }
+  @include for-desktop-up {
+    font-size: $desktop-font ;
+  }
+  @include for-big-desktop-up{
+    font-size: $big-desktop-font;
   }
   &:hover{
     background-color: #fff;

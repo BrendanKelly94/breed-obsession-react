@@ -65,6 +65,7 @@ class PostingsComponent extends React.Component {
         overflow: 'auto',
         outline: 'none',
         padding: '20px',
+        height: 'fit-content',
       }
     };
 

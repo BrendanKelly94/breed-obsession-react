@@ -1,18 +1,3 @@
-@mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
-}
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
-}
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) { @content; }
-}
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
-}
 
 #home-name{
   margin-top:3%;
@@ -24,18 +9,20 @@
 
 #home{
   flex-direction: column;
+  flex-wrap:nowrap;
   margin-left:0;
   margin-right:0;
     @include for-phone-only{
       margin-top:10%;
       margin-left:0;
       margin-right:0;
-      align-items:unset;
+      align-items:center;
     }
     @include for-tablet-portrait-up{
       margin-top:7%;
       margin-left:2%;
       margin-right:2%;
+      align-items:center;
     }
     @include for-tablet-landscape-up{
       margin-top:2%;
@@ -45,7 +32,7 @@
       padding: 2%;
       border-radius: 5px;
       background-color: #fff;
-      align-items: unset;
+      align-items: flex-start;
     }
     @include for-desktop-up {
       margin-top:2%;
@@ -55,7 +42,7 @@
       width: 50%;
       border-radius: 5px;
       background-color: #fff;
-      align-items: unset;
+      align-items: flex-start;
     }
     @include for-big-desktop-up{
       margin-top:2%;
@@ -65,7 +52,7 @@
       width: 50%;
       border-radius: 5px;
       background-color: #fff;
-      align-items: unset;
+      align-items: flex-start;
     }
 }
 
@@ -80,11 +67,6 @@
 #advanced{
     width:100%;
 }
-
-#home-component .row{
-  flex-wrap:nowrap;
-}
-
 
 #home-name{
   margin-bottom: 5%;
@@ -111,7 +93,6 @@
 label{
   font-weight: 600;
   color: #fff;
-  float:right;
   @include for-tablet-landscape-up{
     color: #000;
   }
@@ -131,7 +112,7 @@ select{
   margin-bottom: 20px;
 
   @include for-phone-only{
-    max-width:200px;
+    width:200px;
   }
   @include for-tablet-landscape-up{
     color: #000;
@@ -144,6 +125,18 @@ select{
   @include for-big-desktop-up{
     color: #000;
     border-color: #000;
+  }
+}
+
+.select-item{
+  @include for-tablet-landscape-up{
+    margin-left: 15%;
+  }
+  @include for-desktop-up {
+    margin-left: 17%;
+  }
+  @include for-big-desktop-up{
+    margin-left: 20%;
   }
 }
 

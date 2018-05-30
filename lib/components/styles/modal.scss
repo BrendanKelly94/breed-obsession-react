@@ -3,6 +3,14 @@
   interval:false;
 }
 
+.modal-header{
+  padding:0;
+}
+
+.header-button{
+   padding: 0px 7px 0px 7px;
+}
+
 .modal-details{
     p{
       @include for-phone-only{
@@ -10,44 +18,52 @@
         margin-bottom: 2px;
       }
       @include for-tablet-portrait-up{
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 3px;
       }
       @include for-tablet-landscape-up{
-        font-size: 13px;
+        font-size: 16px;
         margin-bottom: 5px;
       }
       @include for-desktop-up {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 7px;
       }
       @include for-big-desktop-up{
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 10px;
       }
     }
 
 }
 .description{
+  margin-top: 5%;
+
   @include for-phone-only{
     font-size: 12px;
     margin-bottom: 2px;
   }
   @include for-tablet-portrait-up{
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 3px;
   }
   @include for-tablet-landscape-up{
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   @include for-desktop-up {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 7px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   @include for-big-desktop-up{
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
@@ -74,10 +90,41 @@
 }
 
 .modal-details{
+  margin-top: 2%;
   display:flex;
   justify-content:space-around;
   p{
     margin-right: 5px;
+  }
+}
+
+.modal-body{
+
+  @include for-phone-only{
+
+    padding: 0;
+  }
+}
+
+.modal-footer {
+  padding:5px;
+  button{
+
+    @include for-phone-only{
+      font-size: $phone-font;
+    }
+    @include for-tablet-portrait-up{
+      font-size: $tablet-portrait-font;
+    }
+    @include for-tablet-landscape-up{
+      font-size: $tablet-landscape-font;
+    }
+    @include for-desktop-up {
+      font-size: $desktop-font;
+    }
+    @include for-big-desktop-up{
+      font-size: $big-desktop-font;
+    }
   }
 }
 
