@@ -12,17 +12,18 @@
   flex-wrap:nowrap;
   margin-left:0;
   margin-right:0;
+  align-items:center;
     @include for-phone-only{
       margin-top:10%;
       margin-left:0;
       margin-right:0;
-      align-items:center;
+
     }
     @include for-tablet-portrait-up{
       margin-top:7%;
       margin-left:2%;
       margin-right:2%;
-      align-items:center;
+
     }
     @include for-tablet-landscape-up{
       margin-top:2%;
@@ -32,7 +33,7 @@
       padding: 2%;
       border-radius: 5px;
       background-color: #fff;
-      align-items: flex-start;
+
     }
     @include for-desktop-up {
       margin-top:2%;
@@ -42,7 +43,7 @@
       width: 50%;
       border-radius: 5px;
       background-color: #fff;
-      align-items: flex-start;
+
     }
     @include for-big-desktop-up{
       margin-top:2%;
@@ -52,7 +53,7 @@
       width: 50%;
       border-radius: 5px;
       background-color: #fff;
-      align-items: flex-start;
+
     }
 }
 
@@ -64,9 +65,7 @@
   }
 }
 
-#advanced{
-    width:100%;
-}
+
 
 #home-name{
   margin-bottom: 5%;
@@ -141,6 +140,16 @@ select{
   @include for-big-desktop-up{
     margin-left: 20%;
   }
+}
+
+.downshift-dropdown{
+  background-color: #fff;
+  border: 2px solid rgba(34,36,38,.15);
+  border-radius: 3px;
+  width: 236.5px;
+  max-height: 300px;
+  position:absolute;
+  overflow-y: auto;
 }
 
 a{
