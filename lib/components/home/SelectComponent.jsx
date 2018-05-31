@@ -43,7 +43,7 @@ class SelectComponent extends React.Component {
               <label {...getLabelProps()}>{label}</label>
             </div>
             <input {...getInputProps()} className = {isRequesting?'loading':''} onClick = {this.handleOpen}/>
-            <button onClick = {this.handleOpen}>
+            <button className = "dropdown-button btn" onClick = {this.handleOpen}>
               <svg
                 viewBox="0 0 20 20"
                 preserveAspectRatio="none"

@@ -152,6 +152,14 @@ select{
   overflow-y: auto;
 }
 
+.dropdown-button{
+  height: 30px;
+  margin-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0px;
+}
+
 a{
   color: #67f441 !important;
   &:hover{
