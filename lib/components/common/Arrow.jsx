@@ -10,7 +10,9 @@ const Arrow = ({ degree , isOpen , width, strokeWidth, stroke }) => {
       strokeWidth={strokeWidth}
       transform={isOpen ? `rotate(${degree})` : null}
     >
-      <path d="M1,6 L10,15 L19,6" />
+      <g>
+        <path d="M1,6 L10,15 L19,6" />
+      </g>
     </svg>
   );
 };

@@ -18,10 +18,10 @@ class Carousel extends React.Component {
       slideNum = ((this.state.slideIndex + 1) % (this.props.pics.length));
     }
     this.setState({slideIndex: slideNum},() => {
-      window.document.getElementById(`${prevSlideIndex}`).classList.remove('currentSlide');
-      window.document.getElementById(`indicator-${prevSlideIndex}`).classList.remove('activeIndicator');
-      window.document.getElementById(`${this.state.slideIndex}`).classList.add('currentSlide');
-      window.document.getElementById(`indicator-${this.state.slideIndex}`).classList.add('activeIndicator');
+      document.getElementById(`${prevSlideIndex}`).classList.remove('currentSlide');
+      document.getElementById(`indicator-${prevSlideIndex}`).classList.remove('activeIndicator');
+      document.getElementById(`${this.state.slideIndex}`).classList.add('currentSlide');
+      document.getElementById(`indicator-${this.state.slideIndex}`).classList.add('activeIndicator');
 
     });
   }
@@ -29,10 +29,10 @@ class Carousel extends React.Component {
   selectSlide = (num) => {
     let prevSlideIndex = this.state.slideIndex;
     this.setState({slideIndex: num},() => {
-      window.document.getElementById(`${prevSlideIndex}`).classList.remove('currentSlide');
-      window.document.getElementById(`indicator-${prevSlideIndex}`).classList.remove('activeIndicator');
-      window.document.getElementById(`${this.state.slideIndex}`).classList.add('currentSlide');
-      window.document.getElementById(`indicator-${this.state.slideIndex}`).classList.add('activeIndicator');
+      document.getElementById(`${prevSlideIndex}`).classList.remove('currentSlide');
+      document.getElementById(`indicator-${prevSlideIndex}`).classList.remove('activeIndicator');
+      document.getElementById(`${this.state.slideIndex}`).classList.add('currentSlide');
+      document.getElementById(`indicator-${this.state.slideIndex}`).classList.add('activeIndicator');
 
     });
   }
