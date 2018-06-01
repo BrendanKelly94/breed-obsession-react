@@ -14,31 +14,115 @@
   @media (min-width: 1800px) { @content; }
 }
 
-.carousel-item img{
+#slides {
+    position: relative;
+    margin: 0 3% 2% 0;
+    float: left;
+    padding: 0px;
+    list-style-type: none;
+    @include for-phone-only{
+      height:245px;
+      width:inherit 245px;
+    }
+    @include for-tablet-portrait-up{
+      height:300px;
+      width:300px !important;
+    }
+    @include for-tablet-landscape-up{
+      height:400px;
+      width:400px !important;
+    }
+    @include for-desktop-up {
+      height:500px;
+      width:500px !important;
+    }
+    @include for-big-desktop-up{
+      height:600px;
+      width:600px !important;
+    }
+}
 
-  @include for-phone-only{
-    height:250px;
-    width:inherit !important;
-  }
-  @include for-tablet-portrait-up{
-    height:300px;
-    width:300px !important;
-  }
-  @include for-tablet-landscape-up{
-    height:400px;
-    width:400px !important;
-  }
-  @include for-desktop-up {
-    height:500px;
-    width:500px !important;
-  }
-  @include for-big-desktop-up{
-    height:600px;
-    width:600px !important;
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+}
+
+.currentSlide {
+    opacity: 1;
+    z-index: 2;
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left{
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+#carousel-next{
+  z-index: 5;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  background-color:transparent;
+  border:none;
+  &:focus{
+    outline:none;
   }
 }
 
-.carousel{
-  float:left;
-  margin-right: 2%;
+#carousel-prev{
+  z-index: 5;
+  position: absolute;
+  height: 100%;
+  left:0;
+  background-color:transparent;
+  border:none;
+  &:focus{
+    outline:none;
+  }
+}
+
+#indicator-container{
+  position:absolute;
+  bottom: 2%;
+  display:flex;
+  width:100%;
+  justify-content:center;
+}
+
+.activeIndicator{
+  background-color:#fff !important;
+}
+
+.indicator{
+  height: 3px;
+  width: 25px;
+  background-color: hsla(0,0%,100%,.5);
+  margin: 0 5px 0 5px;
+  z-index: 5;
+  &:hover{
+    background-color:#fff;
+  }
 }

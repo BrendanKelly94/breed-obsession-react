@@ -37,8 +37,6 @@
 
 }
 .description{
-  margin-top: 5%;
-
   @include for-phone-only{
     font-size: 12px;
     margin-bottom: 2px;
@@ -46,24 +44,24 @@
   @include for-tablet-portrait-up{
     font-size: 14px;
     margin-bottom: 3px;
+    margin-right:5%;
   }
   @include for-tablet-landscape-up{
     font-size: 16px;
     margin-bottom: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-right:5%;
   }
   @include for-desktop-up {
     font-size: 18px;
     margin-bottom: 7px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-right:5%;
+
   }
   @include for-big-desktop-up{
     font-size: 24px;
     margin-bottom: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-right:5%;
+
   }
 }
 

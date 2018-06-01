@@ -1,5 +1,6 @@
 import React from 'react';
 import Downshift from 'downshift';
+import Arrow from '../common/Arrow.jsx';
 
 class SelectComponent extends React.Component {
   constructor(props) {
@@ -44,22 +45,12 @@ class SelectComponent extends React.Component {
             </div>
             <input {...getInputProps()} className = {isRequesting?'loading':''} onClick = {this.handleOpen}/>
             <button className = "dropdown-button btn" onClick = {this.handleOpen}>
-              <svg
-                viewBox="0 0 20 20"
-                preserveAspectRatio="none"
-                width={16}
-                fill="transparent"
-                stroke="#979797"
-                strokeWidth="1.1px"
-                transform={isOpen ? 'rotate(180)' : null}
-              >
-                <path d="M1,6 L10,15 L19,6" />
-              </svg>
+              <Arrow width = {16} stroke = {'#979797'} strokeWidth = {'1.1px'} isOpen = {isOpen} degree = {180}/>
             </button>
             {isOpen ? (
               <div className = 'downshift-dropdown'>
                 {items
-                  .filter((i) => !inputValue || i.includes(inputValue))
+                  .filter((i) => !inputValue || i.toLowerCase().includes(inputValue.toLowerCase()))
                   .map((item, index) => (
                     <div key = {item}
                       {...getItemProps({
