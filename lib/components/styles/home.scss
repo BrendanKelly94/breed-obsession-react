@@ -150,6 +150,7 @@ select{
   max-height: 300px;
   position:absolute;
   overflow-y: auto;
+  z-index:5;
 }
 
 .dropdown-button{
