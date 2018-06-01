@@ -45,7 +45,7 @@ class SelectComponent extends React.Component {
             </div>
             <input {...getInputProps()} className = {isRequesting?'loading':''} onClick = {this.handleOpen}/>
             <button className = "dropdown-button btn" onClick = {this.handleOpen}>
-              <Arrow width = {16} stroke = {'#979797'} strokeWidth = {'1.1px'} isOpen = {isOpen} degree = {180}/>
+              <Arrow width = {'15px'} color = {'#979797'} borderWidth = {'2px'} isOpen = {isOpen} degree = {45}/>
             </button>
             {isOpen ? (
               <div className = 'downshift-dropdown'>

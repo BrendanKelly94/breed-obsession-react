@@ -66,10 +66,10 @@ class Carousel extends React.Component {
             }
           </div>
           <button id = "carousel-next" onClick = {() => this.changeSlide(1)}>
-            <Arrow width = {24} stroke = {'#fff'} strokeWidth = {'1.5px'} isOpen = {true} degree = {-90}/>
+            <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {-45}/>
           </button>
           <button id = "carousel-prev" onClick = {() => this.changeSlide(-1)}>
-            <Arrow width = {24} stroke = {'#fff'} strokeWidth = {'1.5px'} isOpen = {true} degree = {90}/>
+            <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {135}/>
           </button>
         </ul>
       </div>
