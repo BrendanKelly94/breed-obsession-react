@@ -30,27 +30,25 @@ p.name{
 }
 
 
-img{
+.thumbnail{
   margin-top:3%;
   margin-bottom:3%;
   border-radius: 5%;
   width:100%;
-  object-fit:fill;
-  @include for-phone-only{
-    height:$phone-img-size;
-  }
-  @include for-tablet-portrait-up{
-    height:$tablet-portrait-img-size;
-  }
-  @include for-tablet-landscape-up{
-    height:$table-landscape-img-size;
-  }
-  @include for-desktop-up {
-    height:$desktop-img-size;
-  }
-  @include for-big-desktop-up{
-    height:$big-desktop-img-size;
-  }
+  height: auto;
+  max-height: 300px;
+  object-fit:cover;
+  vertical-align: middle;
+}
+
+.helper{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.img-container{
+  padding: 0;
 }
 
 .details{
@@ -174,6 +172,10 @@ img{
     background-color: #fff;
     color:#000;
   }
+}
+
+.navigation-buttons{
+  flex-wrap: nowrap;
 }
 
 #next-button{

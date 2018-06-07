@@ -38,27 +38,27 @@
 }
 .description{
   @include for-phone-only{
-    font-size: 12px;
+    font-size: $phone-font;
     margin-bottom: 2px;
   }
   @include for-tablet-portrait-up{
-    font-size: 14px;
+    font-size: $tablet-portrait-font;
     margin-bottom: 3px;
     margin-right:5%;
   }
   @include for-tablet-landscape-up{
-    font-size: 16px;
+    font-size: $tablet-landscape-font;
     margin-bottom: 5px;
     margin-right:5%;
   }
   @include for-desktop-up {
-    font-size: 18px;
+    font-size: $desktop-font;
     margin-bottom: 7px;
     margin-right:5%;
 
   }
   @include for-big-desktop-up{
-    font-size: 24px;
+    font-size: $big-desktop-font;
     margin-bottom: 10px;
     margin-right:5%;
 

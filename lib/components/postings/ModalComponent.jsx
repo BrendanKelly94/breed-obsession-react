@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import CarouselComponent from './CarouselComponent.jsx';
 
 const ModalComponent = ({ selectedPost, closeModal}) => {
 
   return (
-    <div>
+    <Fragment>
       <div className = "modal-header">
         <h4 className = "modal-title">{selectedPost.name}</h4>
         <button type = "button" className = "header-button btn btn-outline-dark" onClick = {() => closeModal()} >
@@ -32,7 +32,7 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
       <div className = "modal-footer">
         <button type = "button" className = "btn btn-outline-dark" onClick = {() => closeModal()} >Close</button>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

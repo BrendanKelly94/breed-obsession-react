@@ -20,8 +20,9 @@ const PostComponent = ({ post , selectPost }) => {
 
   return (
     <div className = "container row posts">
-      <div className = "col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <img src={post.thumbnail} alt = "thumbnail"/>
+      <div className = "img-container col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <span className = "helper"></span>
+        <img className = "thumbnail" src={post.thumbnail} alt = "thumbnail"/>
       </div>
 
       <div className = "col-lg-8 col-md-8 col-sm-8 col-xs-12">

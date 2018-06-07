@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import SelectComponent from './SelectComponent.jsx';
 import { Link } from 'react-router-dom';
 
@@ -31,7 +31,7 @@ const HomeComponent = ({
   ];
 
   return (
-    <div id = "home-component">
+    <Fragment>
       <div className = "row" id = "home-name">
         <h1> Breed Obsession </h1>
       </div>
@@ -67,7 +67,7 @@ const HomeComponent = ({
           <p>Powered by Petfinder <a href = "https:www.petfinder.com">www.petfinder.com</a></p>
         </div>
       </footer>
-    </div>
+    </Fragment>
   );
 };
 

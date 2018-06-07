@@ -42,37 +42,33 @@ class Carousel extends React.Component {
     const { pics } = this.props;
 
     return (
-      <div>
-        <ul id = "slides">
+      <ul id = "slides">
+        {(pics.length)?
+          pics.map((pic, index) => {
+            return (
+              <li key = {pic.$t}>
+                <img id = {`${index}`} src ={pic.$t} className = {(index === 0)? 'slide currentSlide': 'slide'}/>
+              </li>
+            );
+          }):null
+        }
+        <div id = "indicator-container">
           {(pics.length)?
             pics.map((pic, index) => {
               return (
-                <li key = {pic.$t}
-                  id = {`${index}`}
-                  className = {(index === 0)? 'slide currentSlide': 'slide'}
-                  style = {{'backgroundImage': `url(${pic.$t})`}}>
-                </li>
+                <div key = {pic.$t + index} className = {(index === 0)?'indicator activeIndicator':'indicator'} id = {`indicator-${index}`} onClick = {() => this.selectSlide(index)}></div>
               );
             }):null
-          }
-          <div id = "indicator-container">
-            {(pics.length)?
-              pics.map((pic, index) => {
-                return (
-                  <div key = {pic.$t + index} className = {(index === 0)?'indicator activeIndicator':'indicator'} id = {`indicator-${index}`} onClick = {() => this.selectSlide(index)}></div>
-                );
-              }):null
 
-            }
-          </div>
-          <button id = "carousel-next" onClick = {() => this.changeSlide(1)}>
-            <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {-45}/>
-          </button>
-          <button id = "carousel-prev" onClick = {() => this.changeSlide(-1)}>
-            <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {135}/>
-          </button>
-        </ul>
-      </div>
+          }
+        </div>
+        <button id = "carousel-next" onClick = {() => this.changeSlide(1)}>
+          <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {-45}/>
+        </button>
+        <button id = "carousel-prev" onClick = {() => this.changeSlide(-1)}>
+          <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {135}/>
+        </button>
+      </ul>
     );
   }
 }

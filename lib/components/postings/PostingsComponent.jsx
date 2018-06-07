@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PostComponent from './PostComponent.jsx';
-import ModalComponent from './ModalComponent.jsx';
+import ModalContainer from './ModalContainer.js';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 import Loading from '../common/Loading.jsx';
@@ -11,7 +11,7 @@ class PostingsComponent extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { viewportWidth: document.documentElement.clientWidth };
+    this.state = { viewportWidth: document.documentElement.clientWidth, viewportHeight: document.documentElement.clientHeight };
     this.resizeCallback = this.resizeCallback.bind(this);
   }
 
@@ -47,7 +47,7 @@ class PostingsComponent extends React.Component {
   render() {
 
     const {
-      back, forward, selectPost, closeModal, isModalOpen,  offset, postings, selectedPost,
+      back, forward, selectPost, closeModal, isModalOpen,  offset, postings,
       animal, breed, State, city, sex,
       size, age
     } = this.props;
@@ -66,7 +66,8 @@ class PostingsComponent extends React.Component {
         overflow: 'auto',
         outline: 'none',
         padding: '20px',
-        height: this.state.viewportHeight - (this.state.viewportHeight * .06)
+        height: 'fit-content',
+        maxHeight: this.state.viewportHeight - (this.state.viewportHeight * .06)
       }
     };
 
@@ -83,6 +84,8 @@ class PostingsComponent extends React.Component {
           overflow: 'auto',
           outline: 'none',
           padding: '20px',
+          height: 'fit-content',
+          maxHeight: this.state.viewportHeight - (this.state.viewportHeight * .06)
         }
       };
     }
@@ -104,10 +107,9 @@ class PostingsComponent extends React.Component {
     };
 
     return (
-      <div>
+      <Fragment>
         {(postings.length === 0)?
           <Loading isCenter = {true}/>
-
           :<div className = "container" id = "post-container">
 
             <Link to = "/">
@@ -116,8 +118,7 @@ class PostingsComponent extends React.Component {
 
             {postings.map((post) => {
               return <PostComponent key = {post.id} post = {post} selectPost = {selectPost}/>;
-            })
-            }
+            })}
 
             <Modal
               isOpen={isModalOpen}
@@ -125,11 +126,11 @@ class PostingsComponent extends React.Component {
               style={modalStyles}
               contentLabel="Postings Modal"
             >
-              <ModalComponent selectedPost = {selectedPost} closeModal = {closeModal}/>
+              <ModalContainer/>
             </Modal>
 
 
-            <div className = "row">
+            <div className = "row navigation-buttons">
               {(offset - 25 != 0)?
                 <div className = "col-lg-6" id = "back-button">
                   <button className = "btn" onClick = {() => back(backSearchObject)}> Back </button>
@@ -148,7 +149,7 @@ class PostingsComponent extends React.Component {
             </footer>
           </div>
         }
-      </div>
+      </Fragment>
     );
   }
 }

@@ -43,9 +43,9 @@
 }
 
 .slide {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    object-fit: contain;
+    position:absolute;
+    background-color: black;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -57,21 +57,6 @@
     -o-transition: opacity 1s;
     transition: opacity 1s;
 
-    @include for-phone-only{
-      background-size: 100% 245px;
-    }
-    @include for-tablet-portrait-up{
-      background-size: 300px 300px;
-    }
-    @include for-tablet-landscape-up{
-      background-size: 400px 400px;
-    }
-    @include for-desktop-up {
-      background-size: 500px 500px;
-    }
-    @include for-big-desktop-up{
-      background-size: 600px 600px;
-    }
 
 }
 
