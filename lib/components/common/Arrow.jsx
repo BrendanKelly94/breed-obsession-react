@@ -13,6 +13,8 @@ const Arrow = ({ degree , isOpen , width, borderWidth, color}) => {
         'borderBottom': `${borderWidth} solid`,
         'height': `${width}`,
         'width': `${width}`,
+        'transition': 'transform .2s ease-in-out',
+        'willChange': 'transform',
         'transform': `rotate(${finalDegree}deg)`,
         'color': `${color}`
       }
