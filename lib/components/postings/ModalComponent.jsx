@@ -7,8 +7,8 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
     <Fragment>
       <div className = "modal-header">
         <h4 className = "modal-title">{selectedPost.name}</h4>
-        <button type = "button" className = "header-button btn btn-outline-dark" onClick = {() => closeModal()} >
-          <span>×</span>
+        <button type = "button" className = "header-button btn modal-button-close" onClick = {() => closeModal()} >
+          <span className = "modal-button-close-text">×</span>
         </button>
       </div>
       <div className = "modal-body">
@@ -30,7 +30,7 @@ const ModalComponent = ({ selectedPost, closeModal}) => {
 
       </div>
       <div className = "modal-footer">
-        <button type = "button" className = "btn btn-outline-dark" onClick = {() => closeModal()} >Close</button>
+        <button type = "button" className = "btn modal-button-close" onClick = {() => closeModal()} ><p className = "modal-button-close-text">Close</p></button>
       </div>
     </Fragment>
   );

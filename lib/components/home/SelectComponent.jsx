@@ -19,7 +19,7 @@ class SelectComponent extends React.Component {
 
 
   render() {
-    const {isRequesting, label, items , callback } = this.props;
+    const { isError, isRequesting, label, items , callback, selectCallback } = this.props;
     const { isFocused, isSelected } = this.state;
 
     let labelClass= '';
@@ -35,6 +35,7 @@ class SelectComponent extends React.Component {
         onChange={(selection) => {
           callback(selection);
           this.setState({isOpen: !this.state.isOpen, isSelected: true});
+          selectCallback();
         }
         }
         {...this.state}
@@ -48,11 +49,13 @@ class SelectComponent extends React.Component {
           selectedItem,
         }) => (
           <div>
-            <div className = "row combobox-div">
+            <div className = {isError?'row combobox-div error':'row combobox-div'}>
               <label className = {labelClass} {...getLabelProps()}>{label}</label>
-              <input {...getInputProps()} htmlFor= 'text' className = {isRequesting?'loading':''} onClick = {this.handleOpen}/>
-              <button className = "dropdown-button btn" onClick = {this.handleOpen}>
-                <Arrow width = {'10px'} color = {'#979797'} borderWidth = {'2px'} isOpen = {isOpen} degree = {45}/>
+              <input {...getInputProps()} htmlFor= 'text' onClick = {this.handleOpen}/>
+              <button className = {isRequesting?'dropdown-button btn loading':'dropdown-button btn'} onClick = {this.handleOpen}>
+                {!isRequesting &&
+                  <Arrow width = {'10px'} color = {'#979797'} borderWidth = {'2px'} isOpen = {isOpen} degree = {45} isLoading = {isRequesting}/>
+                }
               </button>
               {isOpen ? (
                 <div className = 'downshift-dropdown'>

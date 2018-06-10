@@ -128,7 +128,7 @@ select{
 }
 
 
-.combobox-div{
+.combobox-div {
   position:relative;
   margin-top: 30px;
   label{
@@ -215,6 +215,7 @@ select{
 
 .dropdown-button{
   height: 30px;
+  min-width: 30px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 0px;
@@ -263,4 +264,15 @@ footer{
     text-align:center;
     color: #61dafb;
   }
+}
+
+.error label{
+  transition: color 0.5s ease;
+  color: red;
+}
+
+@keyframes errorAnimation {
+  0%   {background-color: #fff; }
+  50%  { background-color: red; }
+  100% { background-color: #fff; }
 }
