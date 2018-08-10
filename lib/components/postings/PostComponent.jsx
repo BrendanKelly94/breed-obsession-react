@@ -9,7 +9,7 @@ const PostComponent = ({ post , selectPost }) => {
     sex: post.sex,
     breed: post.breed,
     city: post.city,
-    State: post.State,
+    State: post.state,
     email: post.email,
     phone: post.phone,
     description: post.description,
@@ -34,7 +34,7 @@ const PostComponent = ({ post , selectPost }) => {
           <p> <b>Age:</b> {post.age} </p>
           <p> <b>Sex:</b> {post.sex} </p>
           <p> <b>Breed:</b> {post.breed} </p>
-          <p> <b>Location:</b> {post.city} , {post.State} </p>
+          <p> <b>Location:</b> {post.city + ', ' + post.state} </p>
           <button className = "btn btn-lg modal-button" onClick = {() => selectPost(postObject)}><p className = "modal-button-text">View</p></button>
         </div>
       </div>
