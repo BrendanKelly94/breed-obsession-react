@@ -267,7 +267,9 @@ a{
   }
 }
 
-footer{
+#home-foot{
+  position:fixed;
+  bottom: 1em;
   width:100%;
   div p{
     text-align:center;

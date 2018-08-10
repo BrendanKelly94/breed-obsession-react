@@ -179,9 +179,7 @@ p.modal-button-text{
 
   position: fixed;
   left: 2%;
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
+
   @include for-phone-only{
     position: unset;
     margin-left:2%;
@@ -200,10 +198,7 @@ p.modal-button-text{
   @include for-big-desktop-up{
     font-size: $big-desktop-font;
   }
-  &:hover{
-    background-color: #fff;
-    color:#000;
-  }
+
 }
 
 .navigation-buttons{
@@ -213,16 +208,7 @@ p.modal-button-text{
 #next-button{
   margin-top: 2%;
     margin-bottom: 2%;
-    button{
-      float:right;
-      color: #fff;
-      background-color:transparent;
-      border-color:#fff;
-      &:hover{
-        background-color: #fff;
-        color:#000;
-      }
-    }
+
 }
 
 #back-button{

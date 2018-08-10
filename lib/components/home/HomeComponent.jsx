@@ -122,7 +122,7 @@ class HomeComponent extends React.Component {
           }
         </div>
 
-        <footer>
+        <footer id = "home-foot">
           <div className = "container">
             <p>Powered by Petfinder <a href = "https:www.petfinder.com">www.petfinder.com</a></p>
           </div>
