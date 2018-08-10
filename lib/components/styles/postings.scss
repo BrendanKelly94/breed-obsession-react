@@ -228,16 +228,25 @@ p.modal-button-text{
 #back-button{
   margin-top: 2%;
     margin-bottom: 2%;
-    button{
-      color: #fff;
-      background-color:transparent;
-      border-color:#fff;
-      &:hover{
-        background-color: #fff;
-        color:#000;
-      }
-    }
+
 }
+
+.outline-button-white{
+  color: #fff;
+  background-color:transparent;
+  border-color:#fff;
+  &:hover{
+    background-color: #fff;
+    color:#000;
+  }
+}
+
+.invisible{
+  visibility: hidden;
+
+}
+
+
 footer{
   width:100%;
 }

@@ -1,3 +1,8 @@
+input{
+  border-radius: 0px;
+  border: 1px solid #adadad;
+}
+
 
 #home-name{
   margin-top:3%;
@@ -221,9 +226,13 @@ select{
   border-radius: 0px;
   border-width: .5px;
   border-left:none;
-  border-color: lightslategray;
+  border-color: #adadad;
+  background-color: #ddd;
   &:focus{
     box-shadow:none;
+  }
+  &:hover{
+    background-color: #ddd;
   }
 }
 

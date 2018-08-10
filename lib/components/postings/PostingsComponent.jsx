@@ -47,7 +47,7 @@ class PostingsComponent extends React.Component {
   render() {
 
     const {
-      back, forward, selectPost, closeModal, isModalOpen,  offset, postings,
+      back, forward, selectPost, closeModal, isModalOpen, isError,  offset, postings,
       animal, breed, State, city, sex,
       size, age
     } = this.props;
@@ -103,17 +103,17 @@ class PostingsComponent extends React.Component {
 
     let backSearchObject = {
       ...forwardSearchObject,
-      offset: offset - (25 * 2)
+      offset: (offset > 50)? offset - (25 * 2): 0
     };
 
     return (
       <Fragment>
         {(postings.length === 0)?
-          <Loading isCenter = {true}/>
+          <Loading isCenter = {true} isError = {isError}/>
           :<div className = "container" id = "post-container">
 
             <Link to = "/">
-              <button id = "back" className = "btn"> Home </button>
+              <button id = "back" className = "btn outline-button-white"> Home </button>
             </Link>
 
             {postings.map((post) => {
@@ -131,14 +131,12 @@ class PostingsComponent extends React.Component {
 
 
             <div className = "row navigation-buttons">
-              {(offset - 25 != 0)?
-                <div className = "col-lg-6" id = "back-button">
-                  <button className = "btn" onClick = {() => back(backSearchObject)}> Back </button>
-                </div>
-                :null
-              }
-              <div className = "col-lg-6" id = "next-button">
-                <button className = "btn" onClick = {() => forward(forwardSearchObject)}> Next </button>
+              <div className = {(offset - 25 > 0)? 'col-lg-6': 'col-lg-6 invisible'} id = "back-button">
+                <button className = "btn outline-button-white" onClick = {() => back(backSearchObject)}> Back </button>
+              </div>
+
+              <div className = {(postings.length >= 25)?'col-lg-6' : 'col-lg-6 invisible'} id = "next-button">
+                <button className = "btn outline-button-white" onClick = {() => forward(forwardSearchObject)}> Next </button>
               </div>
             </div>
 
