@@ -1,20 +1,7 @@
 # breed-obsession-react
 This project is a re-write of a previous project built using Angular 5.
 
-This rendition is built using: react + redux, webpack, babel, node
+Breed Obsession is a Web Application that allows you to search for adoptable pets by animal, breed, and location. 
 
-It will:
+This version is built using React 16, Redux, Node/Express, Webpack, and the PetFinder API
 
--be server side rendered
-
--include service worker
-
--make UI changes
-
-TODO:
-
--Provide more test coverage
-
--Setup production environment
-
--Implement server side rendering
