@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import PostComponent from './PostComponent.jsx';
 import ModalContainer from './ModalContainer.js';
-import Modal from 'react-modal';
+import Modal from '@material-ui/core/Modal';
 import { Link } from 'react-router-dom';
 import Loading from '../common/Loading.jsx';
 
@@ -13,10 +13,6 @@ class PostingsComponent extends React.Component {
     super(props);
     this.state = { viewportWidth: document.documentElement.clientWidth, viewportHeight: document.documentElement.clientHeight };
     this.resizeCallback = this.resizeCallback.bind(this);
-  }
-
-  componentWillMount() {
-    Modal.setAppElement('body');
   }
 
   componentWillUnmount(){
@@ -121,10 +117,9 @@ class PostingsComponent extends React.Component {
             })}
 
             <Modal
-              isOpen={isModalOpen}
-              onRequestClose={closeModal}
-              style={modalStyles}
-              contentLabel="Postings Modal"
+              aria-labelledby="simple-modal-title"
+              aria-describedby="simple-modal-description"
+              open={isModalOpen}
             >
               <ModalContainer/>
             </Modal>

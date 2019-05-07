@@ -16,8 +16,8 @@
 
 #slides {
     position: relative;
-    margin: 0 3% 2% 0;
     float: left;
+    margin: 0;
     padding: 0px;
     list-style-type: none;
     @include for-phone-only{

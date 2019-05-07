@@ -18,6 +18,10 @@ const PostComponent = ({ post , selectPost }) => {
     zip: post.zip
   };
 
+  function handleClick(e){
+    selectPost(postObject, e.target.getBoundingClientRect())
+  }
+
   return (
     <div className = "container row posts">
       <div className = "img-container col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -35,7 +39,7 @@ const PostComponent = ({ post , selectPost }) => {
           <p> <b>Sex:</b> {post.sex} </p>
           <p> <b>Breed:</b> {post.breed} </p>
           <p> <b>Location:</b> {post.city + ', ' + post.state} </p>
-          <button className = "btn btn-lg modal-button" onClick = {() => selectPost(postObject)}><p className = "modal-button-text">View</p></button>
+          <button className = "btn btn-lg modal-button" onClick = {handleClick}><p className = "modal-button-text">View</p></button>
         </div>
       </div>
     </div>

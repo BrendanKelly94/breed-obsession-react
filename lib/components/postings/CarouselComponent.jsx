@@ -43,14 +43,15 @@ class Carousel extends React.Component {
 
     return (
       <ul id = "slides">
-        {(pics.length)?
+        {
           pics.map((pic, index) => {
             return (
               <li key = {pic.$t}>
                 <img id = {`${index}`} src ={pic.$t} className = {(index === 0)? 'slide currentSlide': 'slide'}/>
               </li>
             );
-          }):null
+          })
+
         }
         <div id = "indicator-container">
           {(pics.length)?
