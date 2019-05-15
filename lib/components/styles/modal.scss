@@ -17,9 +17,32 @@
 
 .modal-carousel-details{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   padding: 2%;
+    @include for-phone-only{
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+    @include for-tablet-portrait-up{
+      flex-wrap: nowrap;
+      flex-direction: column;
+
+    }
+    @include for-tablet-landscape-up{
+      flex-wrap: wrap;
+      flex-direction: row;
+
+    }
+    @include for-desktop-up {
+      flex-wrap: wrap;
+      flex-direction: row;
+
+    }
+    @include for-big-desktop-up{
+      flex-wrap: wrap;
+      flex-direction: row;
+
+    }
 }
 
 .description{
