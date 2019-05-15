@@ -42,13 +42,13 @@ class Carousel extends React.Component {
     const { pics } = this.props;
 
     return (
-      <ul id = "slides">
+      <div id = "slides">
         {
           pics.map((pic, index) => {
             return (
-              <li key = {pic.$t}>
+              <div key = {pic.$t}>
                 <img id = {`${index}`} src ={pic.$t} className = {(index === 0)? 'slide currentSlide': 'slide'}/>
-              </li>
+              </div>
             );
           })
 
@@ -69,7 +69,7 @@ class Carousel extends React.Component {
         <button id = "carousel-prev" onClick = {() => this.changeSlide(-1)}>
           <Arrow width = {'24px'} color = {'#fff'} borderWidth = {'5px'} isOpen = {false} degree = {135}/>
         </button>
-      </ul>
+      </div>
     );
   }
 }
