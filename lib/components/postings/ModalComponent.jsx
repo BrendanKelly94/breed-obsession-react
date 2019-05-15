@@ -53,7 +53,7 @@ class ModalComponent extends React.Component{
             stroke="black"
             stroke-width="2"/>
             </svg>
-            <div style = {{display: 'flex', flexDirection: 'column', width: '100%', height: 'fit-content', backgroundColor: '#5c42f4'}}>
+            <div style = {{display: 'flex', flexDirection: 'column', width: '100%', height: 'min-content', backgroundColor: '#5c42f4'}}>
               <h4 style = {{color: '#fff', textAlign: 'center', marginTop: '1em'}}>{selectedPost.name}</h4>
               <div className = "modal-carousel-details">
                 <CarouselComponent pics = {selectedPost.pics} />
