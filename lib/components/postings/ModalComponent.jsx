@@ -28,6 +28,7 @@ class ModalComponent extends React.Component{
       position: 'absolute',
       right: '1em',
       top: '1em',
+      zIndex: '1'
     }
 
   }
@@ -53,6 +54,7 @@ class ModalComponent extends React.Component{
             stroke="black"
             stroke-width="2"/>
             </svg>
+            <Scrollbars>
             <div style = {{display: 'flex', flexDirection: 'column', width: '100%', backgroundColor: '#5c42f4'}}>
               <h4 style = {{color: '#fff', textAlign: 'center', marginTop: '1em'}}>{selectedPost.name}</h4>
               <div className = "modal-carousel-details">
@@ -69,7 +71,7 @@ class ModalComponent extends React.Component{
 
               </div>
             </div>
-            <Scrollbars>
+
               <p className = "description">
                 {selectedPost.description}
               </p>
