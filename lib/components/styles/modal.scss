@@ -45,6 +45,29 @@
     }
 }
 
+.modal-details{
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: #fff;
+  @include for-phone-only{
+    flex-direction: row;
+  }
+  @include for-tablet-portrait-up{
+    flex-direction: row;
+  }
+  @include for-tablet-landscape-up{
+    flex-direction: column;
+  }
+  @include for-desktop-up {
+    flex-direction: column;
+  }
+  @include for-big-desktop-up{
+    flex-direction: column;
+  }
+}
+
 .description{
   @include for-phone-only{
     font-size: $phone-font;
